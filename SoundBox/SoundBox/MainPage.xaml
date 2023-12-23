@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="SoundBox.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoundBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Select Folder" Click="SelectFolderButton_Click" Grid.Row="3" Margin="444,631,0,0" VerticalAlignment="Top" FontSize="24" Height="54" Width="170"/>
+        <Button Content="Create Playlist" Click="CreatePlaylistButton_Click" Grid.Row="3" Margin="674,631,0,0" VerticalAlignment="Top" FontSize="24" Height="54" Width="164"/>
+        <Button Content="Play Playlist" Click="PlayPlaylistButton_Click" Grid.Row="3" Margin="899,631,0,0" VerticalAlignment="Top" FontSize="24" Height="54" Width="163"/>
+        <Button Content="Sort Files" Click="SortButton_Click" Grid.Row="3" FontSize="24" Margin="233,631,0,0" VerticalAlignment="Top" Height="54" Width="151"/>
+        <ListView x:Name="FileListView" Margin="0,96,0,0" Grid.Row="3" HorizontalAlignment="Center" Width="845" Height="508" VerticalAlignment="Top"/>
+        <TextBox x:Name="SearchTextBox" PlaceholderText="Search" KeyUp="SearchTextBox_KeyUp" Grid.Row="3" Margin="0,27,0,0" FontSize="24" HorizontalAlignment="Left" Width="1280" Height="54" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
